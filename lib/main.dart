@@ -1,8 +1,10 @@
 import 'dart:async';
-
+import 'config.dart';
 import 'package:firebase_admob/firebase_admob.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
+import 'package:animated_splash/animated_splash.dart';
+
 void main() => runApp(App());
 const String testDevice = 'MobileId';
 class App extends StatelessWidget {
@@ -10,11 +12,16 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Cale Software',
+      title: CustomConfig.title,
       theme: ThemeData(
         primarySwatch: Colors.amber,
       ),
-      home: MyHomePage(),
+      home:  AnimatedSplash(
+              imagePath: 'assets/'+CustomConfig.splashImage,
+              home: MyHomePage(),
+              duration: 2500,
+              type: AnimatedSplashType.StaticDuration,
+            ),
     );
   }
 }
@@ -134,7 +141,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Container(child: WebView(
         javascriptMode: JavascriptMode.unrestricted,
-        initialUrl: "http://www.improsyazilim.com",
+        initialUrl: CustomConfig.getUrl,
         onWebViewCreated: (WebViewController webViewController){
           _controller.complete(webViewController);
         },
