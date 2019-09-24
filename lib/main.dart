@@ -103,7 +103,7 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 new Text(
-                  'Cale Software',
+                  CustomConfig.title,
                   style: new TextStyle(
                       fontSize: 20.0,
                       fontWeight: FontWeight.w500,
