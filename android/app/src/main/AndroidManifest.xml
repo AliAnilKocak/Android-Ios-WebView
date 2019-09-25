@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.caleimpros.webview.web_view">
+    package="com.us.deepscore">
 
     <!-- io.flutter.app.FlutterApplication is an android.app.Application that
          calls FlutterMain.startInitialization(this); in its onCreate method.
@@ -8,12 +8,12 @@
          FlutterApplication and put your custom class here. -->
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="web_view"
+        android:label="Deep Score"
         android:icon="@mipmap/ic_launcher">
 
         <meta-data
                 android:name="com.google.android.gms.ads.APPLICATION_ID"
-                android:value="ca-app-pub-3940256099942544/6300978111"/>
+                android:value="ca-app-pub-7596670973623799~4992034709"/>
 
         <activity
             android:name=".MainActivity"
